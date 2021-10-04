@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <form (ngSubmit)="onSubmit()" [formGroup]="chooseUserForm">
+
+    <app-dropdown [dropdownItems]="users" [dropdownHeader]="usersListHeader" (clickOutput)="setUser($event)"> </app-dropdown>
+    <app-dropdown [dropdownItems]="stuffyMarks" [dropdownHeader]="stuffyListHeader" (clickOutput)="setStuffyMark($event)"></app-dropdown>
+    <app-dropdown [dropdownItems]="moods" [dropdownHeader]="moodListHeader" (clickOutput)="setMood($event)"></app-dropdown>
+
+    <button
+      [disabled]="usersListHeader === '-- Пользователь --'
+      || stuffyListHeader === '-- Оценка --'
+      || moodListHeader === '-- Настроение --'"
+      class="submit-btn"
+      type="submit"
+    >Отправить
+    </button>
+  </form>
+</div>
+
+

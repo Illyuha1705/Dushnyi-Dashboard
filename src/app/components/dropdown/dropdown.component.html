@@ -1,0 +1,15 @@
+<div class="dropdown">
+  <div
+    (click)="dropdownToggle()"
+    class="dropdown__header"
+  >{{dropdownHeader}}
+  </div>
+
+  <ul *ngIf="isDropdownOpen" class="dropdown__content">
+    <li (click)="itemClick(dropdownItem)"
+        *ngFor="let dropdownItem of dropdownItems"
+        class="dropdown__item"
+    >{{dropdownItem}}
+    </li>
+  </ul>
+</div>

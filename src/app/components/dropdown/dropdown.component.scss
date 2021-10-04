@@ -1,0 +1,33 @@
+.dropdown {
+  width: 320px;
+  margin: 0 auto 40px auto;
+
+  .dropdown__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-weight: bold;
+    background: orange;
+    height: 40px;
+  }
+
+  .dropdown__content {
+    max-height: 320px;
+    overflow-x: hidden;
+  }
+
+  .dropdown__item {
+    padding: 10px 0 10px 15px;
+    border-top: 1px solid #962d22;
+    margin: 0;
+    background: orange;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
