@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <form (ngSubmit)="onSubmit()" [formGroup]="chooseUserForm">
+  <form (ngSubmit)="onSubmit()" [formGroup]="stuffyForm">
 
     <app-dropdown [dropdownItems]="users" [dropdownHeader]="usersListHeader" (clickOutput)="setUser($event)"> </app-dropdown>
     <app-dropdown [dropdownItems]="stuffyMarks" [dropdownHeader]="stuffyListHeader" (clickOutput)="setStuffyMark($event)"></app-dropdown>

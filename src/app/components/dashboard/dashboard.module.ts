@@ -5,6 +5,7 @@ import { FormComponent } from '../form/form.component';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChartModule } from '../chart/chart.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [DashboardComponent, FormComponent, DropdownComponent],
@@ -12,6 +13,7 @@ import { ChartModule } from '../chart/chart.module';
     CommonModule,
     ChartModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   exports: [DashboardComponent],
 })
