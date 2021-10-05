@@ -6,14 +6,11 @@
     <app-dropdown [dropdownItems]="moods" [dropdownHeader]="moodListHeader" (clickOutput)="setMood($event)"></app-dropdown>
 
     <button
-      [disabled]="usersListHeader === '-- Пользователь --'
-      || stuffyListHeader === '-- Оценка --'
-      || moodListHeader === '-- Настроение --'"
+      [disabled]="stuffyForm.invalid"
       class="submit-btn"
       type="submit"
     >Отправить
     </button>
   </form>
 </div>
-
 

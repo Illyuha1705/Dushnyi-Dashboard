@@ -9,7 +9,7 @@ export class DropdownComponent {
   @Input() dropdownItems;
   @Input() dropdownHeader;
 
-  @Output() clickOutput: EventEmitter<any> = new EventEmitter<any>();
+  @Output() clickOutput: EventEmitter<string> = new EventEmitter<string>();
   isDropdownOpen = false;
 
   itemClick(dropdownItem): void {

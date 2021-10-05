@@ -20,7 +20,8 @@ export class ChartService {
         this.stuffyMarksChanged$.emit(this.stuffyMarks);
     }
 
-    calcSumOfMoods(): number {
+    calcSumOfMoods(index,item): number {
+        this.moods.splice(index, 1, item);
         return this.sumOfMoods = this.moods.reduce((a, b) => a + b, 0);
     }
 
@@ -35,20 +36,16 @@ export class ChartService {
 
         switch (mood) {
             case 'Не беспокоить!':
-                this.moods.splice(index, 1, 1);
-                roomMood = this.calcSumOfMoods() / this.CheckedInPeople.length;
+                roomMood = this.calcSumOfMoods(index,1) / this.CheckedInPeople.length;
                 break;
             case 'На троечку':
-                this.moods.splice(index, 1, 2);
-                roomMood = this.calcSumOfMoods() / this.CheckedInPeople.length;
+                roomMood = this.calcSumOfMoods(index,2) / this.CheckedInPeople.length;
                 break;
             case 'Солнце улыбается мне, а я ему':
-                this.moods.splice(index, 1, 3);
-                roomMood = this.calcSumOfMoods() / this.CheckedInPeople.length;
+                roomMood = this.calcSumOfMoods(index,3) / this.CheckedInPeople.length;
                 break;
             case 'Я счастлив(-a), как никто!':
-                this.moods.splice(index, 1, 4);
-                roomMood = this.calcSumOfMoods() / this.CheckedInPeople.length;
+                roomMood = this.calcSumOfMoods(index,4) / this.CheckedInPeople.length;
                 break;
         }
         this.roomMoodChanged$.emit(roomMood);
